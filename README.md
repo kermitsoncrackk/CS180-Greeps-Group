@@ -10,4 +10,7 @@ Krystian Wojtiuk (krw11@aber.ac.uk)
 Doodle poll for peoples availability
 http://doodle.com/poll/iedqqfr72k53vfhv
 
-
+James Strong - Finding tomatoes
+Liam Evans - Returning tomatoes
+Mark Lightfood - Greep communication
+Krystian Wojtiuk - Attacking enemy greeps
