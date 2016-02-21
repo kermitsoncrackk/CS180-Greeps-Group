@@ -1,0 +1,46 @@
+Available methods - List of methods from within Greep master class
+
+MOVEMENT
+
+void move()
+void turn(int angle) *turn a certain number of degrees clockwise
+getAngleTo(int x, int y)
+void turnHome(ship.getX(),ship.getY()) *turn in the direction facing the home ship
+void turnTowards(int x, int y) *turn towards desire location
+boolean canMoveTo(int x, int y)
+boolean moveWasBlocked() *return movewasblocked if true
+boolean atWater() *return atwater if at water
+boolean atShip() *are we at the ship?
+
+OTHER GREEPS
+
+boolean isTeamTwo() *whos ship is this?
+setMemory(int slot, int val) *enough room for 2 coords?
+getMemory(int slot) *request locations
+protected ginal Greep *getFriend()
+protexted final int numberOfFriends(boolean withTomatoes) *how many friends within 70
+protexted final int numberOfOpenents(boolean withTomatoes) *how many enemies within 70
+
+SHIP DATA
+
+int [] getShipData() *stores 1000 ints
+
+TOMATO
+
+void leaveTomato()
+void loadTomato() *only work if there is another greep
+void carryTomato() *recieve a tomato
+boolean carryingTomato() *are we?
+protected final dropTomato() *has to be at ship or you lose it
+TomatoPile getTomatoes() *if we can see tomatoes it will return tomatoes
+
+SPECIAL
+
+protected final void kablam() *flips greeps range 100
+protexted final void block() *blocks a location could be used to protect tomatoes
+protected final boolean randomChance (int percent) *eg. 50 50% chance of true
+
+UNKOWN
+
+protected final void getFlag() *could be used to show trails?
+protected final void setFlag()
