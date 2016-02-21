@@ -1,4 +1,4 @@
-public class SimpleGreep extends Greep
+public class MyGreep extends Greep
 {
     // Remember: you cannot extend the Greep's memory. So:
     // no additional fields (other than final fields) allowed in this class!
@@ -8,7 +8,7 @@ public class SimpleGreep extends Greep
     /**
      * Default constructor. Do not remove.
      */
-    public SimpleGreep(Ship ship)
+    public MyGreep(Ship ship)
     {
         super(ship);
     }
@@ -131,6 +131,6 @@ public class SimpleGreep extends Greep
      */
     public String getName()
     {
-        return "Simple";
+        return "MyGreep";
     }    
 }
