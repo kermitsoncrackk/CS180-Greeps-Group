@@ -63,8 +63,7 @@ public class MyGreep extends Greep {
                 }
             }
 
-        } else if (
-carryingTomato()) {
+        } else if (carryingTomato()) {
             bringTomatoHome();
         } else if (getTomatoes() != null) {
             setFlag(1, true); // Let's show others that we are at the center of the pile. @Krystian
@@ -88,11 +87,9 @@ carryingTomato()) {
                 turnTowards(getFriend().getX(), getFriend().getY()); // Let's move to him. @Krystian
                 move();
             }
-        } if (numberOfOpponents(true) > 
-numberOfFriends(true)) { //Is there more opponents carrying tomato than friends? If yes we want to kablam ASAP.
+        } if (numberOfOpponents(true) > numberOfFriends(true)) { //Is there more opponents carrying tomato than friends? If yes we want to kablam ASAP.
             kablam();
-        } else if (numberOfOpponents(true) == 
-numberOfFriends(true)) { //If there's the same amount of both friendyl and unfriendly greeps carrying tomatos we have to consider one more thing...
+        } else if (numberOfOpponents(true) == numberOfFriends(true)) { //If there's the same amount of both friendyl and unfriendly greeps carrying tomatos we have to consider one more thing...
             if (numberOfOpponents(false) > (numberOfFriends(false) + 1)) { // ... Is there TWO more opponents not carrying tomatos? If yes -> kablam.
                 kablam();
             } else
