@@ -76,7 +76,7 @@ public class MyGreep extends Greep {
         } else  if (getMemory(0) == 1) {
             // Hmm. We know where there are some tomatoes...
             if (distanceTo(getMemory(1), getMemory(2)) < 20 && (getTomatoes() == null)) {// If we are at the coordinates from our memory and there is no tomatoes it means we have to reset our memory @Krystian
-                setMemory(1, 0);
+                setMemory(0, 0);
             }
             turnTowards(getMemory(1), getMemory(2));
             move();
