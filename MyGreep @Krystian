@@ -35,13 +35,13 @@ public class MyGreep extends Greep {
             move();
         } else if (numberOfOpponents(true) > numberOfFriends(true)) { //Is there more opponents carrying tomato than friends? If yes we want to kablam ASAP.
             kablam();
-        } else if (numberOfOpponents(true) == numberOfFriends(true)) { //If there's the same amount of both friendly and unfriendly greeps carrying tomatos we have to consider one more thing...
-            if (numberOfOpponents(false) > numberOfFriends(false)) { // ... Is there more opponents not carrying tomatos? If yes -> kablam.
+        } else if (numberOfOpponents(true) == numberOfFriends(true)) { //If there's the same amount of both friendyl and unfriendly greeps carrying tomatos we have to consider one more thing...
+            if (numberOfOpponents(false) > (numberOfFriends(false) + 1)) { // ... Is there TWO more opponents not carrying tomatos? If yes -> kablam.
                 kablam();
             } else
                 randomWalk();
         } else if (numberOfOpponents(true) < numberOfFriends(true)) { // If there's more friends than enemies carrying tomato we don't really want to blow ourselfs. Unless...
-            if (((numberOfOpponents(true) + 1 ) == numberOfFriends(true)) && (numberOfOpponents(false) > (numberOfFriends(false) + 1))) { // There's is just one more friend carrying tomato and TWO more opponents not carrying toamtos.
+            if (((numberOfOpponents(true) + 1 ) == numberOfFriends(true)) && (numberOfOpponents(false) > (numberOfFriends(false) + 2))) { // There's is just one more friend carrying tomato and THREE more opponents not carrying toamtos.
                 kablam();
             } else
                 randomWalk();
