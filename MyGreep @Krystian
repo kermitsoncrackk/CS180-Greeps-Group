@@ -28,11 +28,12 @@ public class MyGreep extends Greep {
         // Before moving, lets check for food.
         checkFood();
         setMemory(3,0); //Reset memory
+        setFlag(1, false); // memory reset @Mark
 
         if (carryingTomato()) {
             bringTomatoHome();
         } else if (getTomatoes() != null) {
-            setMemory(3, 1); // Let's show others that we are at the center of the pile. @Krystian
+            setFlag(1, true); // Let's show others that we are at the center of the pile. @Krystian -- changed to setflag @Mark
             TomatoPile tomatoes = getTomatoes();
             if (!blockAtPile(tomatoes)) {
                 // Not blocking so lets go towards the centre of the pile
@@ -49,7 +50,7 @@ public class MyGreep extends Greep {
 
         } else if (!(getFriend() == null)) { // Is there any friend next to us? @Krystian
             Greep friend = getFriend();
-            if (friend.getMemory(3) == 1) { // Is he on pile? @Krystian
+            if (friend.getFlag(1) == true) { // Is he on pile? @Krystian -- changed to flags @Mark
                 turnTowards(friend.getX(), friend.getY()); // Let's move to him. @Krystian
                 move();
             } else if ((getMemory(0) == 0) && (friend.getMemory(0) == 1)) { // Does he know where is pile? (and we don't) @Krystian
