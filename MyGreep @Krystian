@@ -88,26 +88,29 @@ public class MyGreep extends Greep {
                 // If we were blocked, try to move somewhere else
                 int x = Greenfoot.getRandomNumber(100);
 
-                if (x <= 20){  
-                    turn(45);
-                    move(); 
-                } else if (x <= 40) {
-                    turn(315);
+                
+                if (x <= 40) {
+                    turn(180);
+                    move();
+                    move();
+                    move();
                     move();
                 } else if (x <= 55) {
-                    turn(80);
+                    turn(40);
                     move();
                 } else if (x <= 70) {
-                    turn(280);
+                    turn(80);
                     move();
                 } else if (x <= 80) {
                     turn(110);
                     move();
                 } else if (x <= 90) {
-                    turn(250);
+                    turn(150);
                     move();
                 } else {
-                    turn(180);
+                    turn(170);
+                    move();
+                    move();
                     move();
                 }
             }
@@ -150,12 +153,33 @@ public class MyGreep extends Greep {
     /**
      * Bring a tomato to our ship. Drop it if we are at the ship.
      */
-    private void bringTomatoHome() {
-        if (atShip()) {
-            dropTomato();
-        } else {
-            turnHome();
-            move();
+    private void bringTomatoHome() 
+    {
+        int r = getRotation();
+        if(atShip()) {
+          dropTomato();
+        }
+        else  if(atWater() || moveWasBlocked()) {
+          turn(180);
+          move();
+          move();
+          turn(90);
+          move();
+          move();
+       }
+         else{
+         turnHome();
+         move();
+         move();
+         turn(250);
+         move();
+         move();
+         turn(150);
+         move();
+         move();
+         turn(50);
+         move();
+         move();
         }
     }
 
